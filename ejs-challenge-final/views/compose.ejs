@@ -1,0 +1,28 @@
+<%# essa é a rota que trata dos posts que o próprio usuário cria, primeiro,
+foram importados o header e o footer, depois, dentro de uma tag form foram
+inseridos a rota o método post que significa que serão postadas informações
+pelo usuário e não apenas recebidas, depois um label title, para o título, um
+input que é o espaço para ser preenchido, com a área de texto (método textarea) e por fim, o
+botão de submit.
+ O identificador FORM é uma ferramenta do HTML que permite a criação de
+  documentos interativos no WWW. O FORM submete os dados de entrada do usuário
+   a um programa que se encarregará do processamento desses dados, de acordo
+    com o interesse do criador do documento.
+    Já o método form-group alinha os elementos de uma forma mais bonita e vem <!DOCTYPE html>
+    bootstrap
+    A lógica aqui é que essa página tenha a forma para a publicação e a página
+    app.js trata da lógica após o texto incluir o submit %>
+
+<%- include("partials/header"); -%>
+    <h1>Compose</h1>
+    <form class="" action="/compose" method="post">
+      <div class="form-group">
+        <label>Title</label>
+        <input class="form-control" type="text" name="postTitle">
+        <label>Post</label>
+        <textarea class="form-control" name="postBody" rows="5" cols="30"></textarea>
+      </div>
+      <button class="btn btn-primary" type="submit" name="button">Publish</button>
+    </form>
+
+<%- include("partials/footer"); -%>
